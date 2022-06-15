@@ -4,36 +4,33 @@ import (
 	"fmt"
 )
 
-var (
+const (
 	applePrice  = 5.99
 	pearPrice   = 7.
 	moneyAmount = 23.
 )
 
 func main() {
-	var (
-		appelsAmount int
-		pearsAmount  int
-		moneyToBuy   float64
-	)
 
-	appelsAmount, pearsAmount = 9, 8
-	moneyToBuy = applePrice*float64(appelsAmount) + pearPrice*float64(pearsAmount)
-	fmt.Printf("1. How much money should we spend to buy %v apples and %v pears? \n", appelsAmount, pearsAmount)
-	fmt.Printf("Answer is: %v\n", moneyToBuy)
+	appelsAmount, pearsAmount := 9., 8.
+	moneyToBuy := applePrice * appelsAmount
+	moneyToBuy += pearPrice * pearsAmount
+	fmt.Printf("1. How much money should we spend to buy %d apples and %d pears? \n", int(appelsAmount), int(pearsAmount))
+	fmt.Printf("Answer is: %.2f \n", moneyToBuy)
 
-	pearsAmount = int(moneyAmount / pearPrice)
+	pearsAmount = moneyAmount / pearPrice
 	fmt.Println("2. How many pears can we buy?")
-	fmt.Println("Answer is: ", pearsAmount)
+	fmt.Printf("Answer is: %d \n", int(pearsAmount))
 
-	appelsAmount = int(moneyAmount / applePrice)
+	appelsAmount = moneyAmount / applePrice
 	fmt.Println("3. How many appels can we buy?")
-	fmt.Println("Answer is: ", appelsAmount)
+	fmt.Printf("Answer is: %d \n", int(appelsAmount))
 
 	appelsAmount, pearsAmount = 2, 2
-	moneyToBuy = applePrice*float64(appelsAmount) + pearPrice*float64(pearsAmount)
+	moneyToBuy = applePrice * appelsAmount
+	moneyToBuy += pearPrice * pearsAmount
 	canBuy := moneyAmount >= moneyToBuy
-	fmt.Printf("4. Can we buy %v pears and %v apples? \n", pearsAmount, appelsAmount)
+	fmt.Printf("4. Can we buy %d pears and %d apples? \n", int(pearsAmount), int(appelsAmount))
 	fmt.Println("Answer is: ", canBuy)
 
 }
