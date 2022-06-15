@@ -12,25 +12,27 @@ const (
 
 func main() {
 
-	appelsAmount, pearsAmount := 9., 8.
-	moneyToBuy := applePrice * appelsAmount
-	moneyToBuy += pearPrice * pearsAmount
-	fmt.Printf("1. How much money should we spend to buy %d apples and %d pears? \n", int(appelsAmount), int(pearsAmount))
+	appelsAmount, pearsAmount := 9, 8
+	moneyToBuy := applePrice * float64(appelsAmount)
+	moneyToBuy += pearPrice * float64(pearsAmount)
+	fmt.Printf("1. How much money should we spend to buy %d apples and %d pears? \n", appelsAmount, pearsAmount)
 	fmt.Printf("Answer is: %.2f \n", moneyToBuy)
 
-	pearsAmount = moneyAmount / pearPrice
+	amountFloat := moneyAmount / pearPrice
+	pearsAmount = int(amountFloat)
 	fmt.Println("2. How many pears can we buy?")
-	fmt.Printf("Answer is: %d \n", int(pearsAmount))
+	fmt.Printf("Answer is: %d \n", pearsAmount)
 
-	appelsAmount = moneyAmount / applePrice
+	amountFloat = moneyAmount / applePrice
+	appelsAmount = int(amountFloat)
 	fmt.Println("3. How many appels can we buy?")
-	fmt.Printf("Answer is: %d \n", int(appelsAmount))
+	fmt.Printf("Answer is: %d \n", appelsAmount)
 
 	appelsAmount, pearsAmount = 2, 2
-	moneyToBuy = applePrice * appelsAmount
-	moneyToBuy += pearPrice * pearsAmount
+	moneyToBuy = applePrice * float64(appelsAmount)
+	moneyToBuy += pearPrice * float64(pearsAmount)
 	canBuy := moneyAmount >= moneyToBuy
-	fmt.Printf("4. Can we buy %d pears and %d apples? \n", int(pearsAmount), int(appelsAmount))
+	fmt.Printf("4. Can we buy %d pears and %d apples? \n", pearsAmount, appelsAmount)
 	fmt.Println("Answer is: ", canBuy)
 
 }
