@@ -17,7 +17,26 @@ func main() {
 		}
 	}
 
+
+	// other solution without map
+
+	// var condition bool
+	// var s []int
+
+	// for !condition {
+	// 	result = append(result, arr[:1]...)
+	// 	s = nil
+	// 	for i, j := 0, 1; j < len(arr); j++ {
+	// 		if arr[i] != arr [j] {
+	// 			s = append(s, arr[j])
+	// 		}
+	// 	}
+	// 	arr = s
+	// 	if len(arr) == 0 {
+	// 		condition = true
+	// 	}
+	// }
+
 	fmt.Println(result)
 
-	
 }
