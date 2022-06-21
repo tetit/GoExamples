@@ -17,6 +17,7 @@ func main() {
 		}
 	}
 
+
 	// other solution without map
 
 	// var condition bool
