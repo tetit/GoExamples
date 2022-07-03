@@ -80,7 +80,11 @@ func main() {
 	rect2 := new(Rectangle)
 	rect2.a = 8
 	rect2.b = 10
+	var rect3 = new(Rectangle)
+	rect3.a = 1
+	rect3.b =2
 	fmt.Println(rect2)
+	fmt.Println(rect3)
 	rect.compareArea(*rect2)
 	fmt.Println(rect.squareInRectangle(square{5}))
 
