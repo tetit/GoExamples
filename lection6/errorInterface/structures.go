@@ -10,10 +10,9 @@ func (t truck) getAvgSpeed() float64 {
 	return t.avgSpeed
 }
 
-func (t truck) getTransportName() string {
+func (t truck) String() string {
 	return "truck"
 }
-
 
 type train struct {
 	capacity int
@@ -25,7 +24,7 @@ func (t train) getAvgSpeed() float64 {
 	return t.avgSpeed
 }
 
-func (t train) getTransportName() string {
+func (t train) String() string {
 	return "train"
 }
 
@@ -39,6 +38,6 @@ func (p pickup) getAvgSpeed() float64 {
 	return p.avgSpeed
 }
 
-func (p pickup) getTransportName() string {
+func (p pickup) String() string {
 	return "pickup"
 }
