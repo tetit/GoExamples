@@ -24,18 +24,19 @@ func main() {
 	// handle the error
 
 	if err != nil {
-		fmt.Errorf("some error")
+		sErr :=fmt.Errorf("some error")
+		fmt.Println(sErr)
 	}
 
-	err = spinner.Start()
+	spinner.Start()
 
 	// doing some work
-	time.Sleep(5 * time.Second)
+	time.Sleep(2 * time.Second)
 
 	spinner.Message("uploading data")
 
 	// upload...
-	time.Sleep(5 * time.Second)
+	time.Sleep(2 * time.Second)
 
-	err = spinner.Stop()
+	spinner.Stop()
 }
